@@ -338,8 +338,8 @@ public class TicTacToeFrame extends JFrame {
                         validMove(player, clicked.getRow(), clicked.getCol());
 
 
-                        System.out.println(numTurns);
-                        if (numTurns > 5 ) {
+
+                        if (numTurns >= 5 ) {
 
                             if (isWin(player)) {
                                 int res = JOptionPane.showOptionDialog(frame, "Player " + player + " Wins!\nDo you want to play again?", "Results", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, img, new Object[]{"Yes", "No"}, JOptionPane.YES_OPTION);
@@ -383,7 +383,7 @@ public class TicTacToeFrame extends JFrame {
                                 msg.setText("Player " + player + ", it is your turn.");
 
                             }
-                        }  if (numTurns > 7 ) {
+                        }  if (numTurns >= 7  ) {
 
                             if (isWin(player)) {
                                 int res = JOptionPane.showOptionDialog(frame, "Player " + player + " Wins!\nDo you want to play again?", "Results", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, img, new Object[]{"Yes", "No"}, JOptionPane.YES_OPTION);
